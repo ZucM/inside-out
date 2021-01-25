@@ -1,14 +1,18 @@
 import './App.css';
 
-var heading="welcome"
-var color="blue"
-var username=prompt("Tell us your name")
-
+var count=0;
 
 export default function App() {
+
+  function likeClickHandler(){
+    console.log("clicked", count)
+    count++;
+  }
+
   return (
     <div className="App">
-      <h1 style={{backgroundColor: color}}>{heading} {username}</h1>
+      <h1>inside outt</h1>
+      <button onClick={likeClickHandler}>Like Me!</button>
     </div>
   );
 }
